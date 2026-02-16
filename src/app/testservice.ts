@@ -9,7 +9,6 @@ export class Testservice {
     return `${lastName} ${firstName}`;
   }
 
-  //method called compute, if number is greater than 0 returns same number, if number is less than 0 returns 0.
   compute(num: number): number {
     if (num > 0) {
       return num;
