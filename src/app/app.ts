@@ -21,7 +21,6 @@ export class App {
   constructor(private testservice: Testservice) {}
 
   onSubmit(): void {
-    this.fullNameResult = `${this.lastName} ${this.firstName}`;
-    console.log('Form submitted:', this.fullNameResult);
-  }
+  this.fullNameResult = this.testservice.fullName(this.firstName, this.lastName);
+}
 }

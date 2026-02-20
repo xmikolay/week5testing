@@ -1,5 +1,5 @@
 import { TestBed } from '@angular/core/testing';
-import { describe, it, expect } from 'vitest';
+import { describe, it, expect, beforeEach } from 'vitest';
 import { Testservice } from './testservice';
 
 describe('Testservice', () => {
@@ -17,12 +17,12 @@ describe('Testservice', () => {
   describe('fullName', () => {
     it('should return "lastName firstName" format', () => {
       const result = service.fullName('John', 'Doe');
-      expect(result).toBe('Doe John');  
+      expect(result).toBe('Doe, John');  
     });
 
     it('should handle empty strings', () => {
       const result = service.fullName('', '');
-      expect(result).toBe(' ');
+      expect(result).toBe(', ');
     });
   });
 
